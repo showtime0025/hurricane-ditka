@@ -23,7 +23,7 @@
 <img class="hero" src="/images/ditka_hero.jpg">
   
 <div class="bodyContainer">
-
+<p>test git</p>
 <div><!--need to get this to lay on top of the image along with the PHP DB output
 
     https://www.w3schools.com/howto/howto_css_image_text.asp
