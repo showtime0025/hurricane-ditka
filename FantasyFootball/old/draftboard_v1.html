@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/FantasyFootball/css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="/FantasyFootball/css/sidenav.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/FantasyFootball/javascript/header.js"></script>
+<title>Hurrican Ditka Fantasy Football Draft Tool</title>
+</head>
+<body>
+<!--Header-->
+<!--
+<div class="row">
+  <div class="header">
+    <div class="col-1">icon</div>
+    <div class="col-8">
+        <div class="navlinks">
+            <a href="#">Draft Board</a>
+            <a href="#">Available Players</a>
+            <a href="#">My Team</a>
+        </div>
+      </div>
+    <div class="col-3">utility nav</div>
+  </div>
+</div>-->
+
+<div w3-include-html="/FantasyFootball/components/menuNav.html"></div>
+<div class="row">
+  <h1>Draft Board</h1>
+</div>
+<!--selected player section-->
+<div class="row">
+
+  <div class="col-5">
+    <div id = "selectedPlayer">
+      <h1>Selected Player</h1>
+      <b>Player Name:</b> <div id="selectPlayerName">--insert player name here</div></br>
+      <b>Position</b> --insert position here </br>
+      <b>Team</b> --insert team here </br>
+      <button onclick"">Draft Player</button>
+    </div>
+</div>
+
+</div>
+
+<!--
+draft carousel/next pick
+-->
+<div class="row">
+  <div class="col12">
+    <p>carousel will go here</p>
+  </div>
+</div>
+
+<!--
+draft board will go here
+
+should change table to make entire row clickable instead of a button
+https://stackoverflow.com/questions/36113459/how-to-make-entire-tr-in-a-table-clickable-like-a-href
+
+need to create a script that will dynamically build the table based on JSON. 
+-->
+<div class="row" align="center" padding="5px">
+  <div style="overflow-x:auto;">
+    <table id="playerTable" border='1'>
+      <tr>
+        <th style="width:20px">Rank</th>
+        <th style="width:20px">Player Name</th>
+        <th style="width:20px">Position</th>
+        <th style="width:20px">Team</th>
+        <th style="width:20px">Bye Week</th>
+        <th style="width:20px"></th>
+      <tr>
+      <tr>
+        <td>1</td>
+        <td id="playerName1">Ben Rothelisberger</td>
+        <td>QB</td>
+        <td>Pittsburgh</td>
+        <td>9</td>
+        <td><button onclick="updateSelectedPlayer(1)">Select Player</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td id="playerName2">Antonio</td>
+        <td>WR</td>
+        <td>Pittsburgh</td>
+        <td>9</td>
+        <td><button onclick="updateSelectedPlayer(2)">Select Player</button></td>
+      </tr>
+    </table>
+</div>
+
+</div>
+<script>
+function updateSelectedPlayer(id){
+var str1="playerName";
+var playerName = str1.concat(id);
+//window.alert(playerName);
+document.getElementById("selectPlayerName").innerHTML = document.getElementById(playerName).innerHTML;
+//need to add code to place player ID into local storage/cookie so it can be used to write to the Database
+}
+</script>
+<!--</div>-->
+
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "375px";
+}
+</script>
+<script>
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+
+
+
+
+
+<script>includeHTML();</script>
+</body>
+</html>

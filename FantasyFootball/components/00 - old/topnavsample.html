@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    width: auto;
+    padding: 0px;
+    border: 1px solid red;
+
+}
+
+.topnav {
+  /*overflow: auto;*/
+  background-color: grey;
+  /*text-align:center;*/
+  height:62px;
+  position: fixed;
+  width: 100%;
+  border: 0px;
+  /*border-color: red;*/
+  
+}
+img.ditka {
+    float: left;
+    overflow: auto;
+}
+
+.linkBox a{
+    color: orange;
+    padding: 22px;
+    text-decoration: none;
+    display: inline;
+    float: left;
+
+}
+
+.ditka a:hover{
+    background-color: white;
+/*  position: absolute;
+    left:0px;
+    top:0px;
+*/
+}
+
+/*.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+ /* text-align: center;
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+  font-size: 17px;
+
+}*/
+
+.header-left{
+    /*float: left;*/
+    display: inline-block;
+    border-color: red;
+    border: 3px;
+    color:green;
+    background-color: green;
+  }
+
+.linkBox {
+  /*float: left;*/
+  padding: 5px;
+  background-color: blue;
+  /*display: inline-block;*/
+  border: 1px;
+  border-color: red;
+}
+
+.linkBox a:hover {
+  background-color: grey;
+  color: black;
+}
+
+.header-right{
+  float:right;
+  height: 100%;
+  width: 35px;
+}
+
+.header-left{
+    float: left;
+    /*display: inline;
+    border-color: red;
+    border: 3px;
+    z-index: 1;*/
+    height: 25px;
+    width: 100px;
+    background-color: green;
+    display: inline;
+
+}
+
+.header-left a{
+  display: inline;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+img.ditka {
+    float: left;
+    overflow: auto;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .linkBox a:not(:first-child) {display: none;}
+  .linkBox a.icon {
+    float: left;
+    display: block;
+  }
+  .topnav{
+    text-align: center;
+  }
+
+  
+}
+
+@media screen and (max-width: 600px) {
+  .linkBox.responsive {position: relative;}
+  .linkBox.responsive .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .topnav {
+    text-align: center;
+    position: fixed;
+  }
+  
+  }
+  .linkBox.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .img.ditka.responsive {
+    padding: 0px;
+
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+   <div>
+     
+   </div>
+   <div class="header-left">
+      <a href="#">left 1</a>
+    </div>
+   <div class="header-left">
+      
+     </div>   <!--close header left-->
+    <div class="header-right">
+      <a href="#">left 2</a>
+     </div><!--close header right-->
+</div>
+
+<!--
+<div style="padding-left:16px">
+  <h2>Responsive Topnav Example</h2>
+  <p>Resize the browser window to see how it works.</p>
+</div>-->
+
+<script>
+function myFunction() {
+    var x = document.getElementById("linkBox");
+    if (x.className === "linkBox") {
+        x.className += " responsive";
+    } else {
+        x.className = "linkBox";
+    }
+}
+</script>
+
+</body>
+</html>
