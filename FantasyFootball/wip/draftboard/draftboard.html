@@ -43,9 +43,11 @@
 		}
 		.taken{
 			float:left;
+			border: 1px solid blue;
 			background-color: none;
 			/*width: 20%;*/
-			padding-left: 25px;
+		
+			padding-left: 35px;
 			padding-right: 10px;
 			/*display: none;*/
 		}
@@ -118,6 +120,16 @@
 			margin: 3px;
 		/*	overflow: hidden;*/
 		}
+
+		.selectedPlayerContainer{
+			border: 1px solid red;
+			height: 200px;
+		}
+
+		.selectedPlayerContainer button {
+			background-color: red;
+
+		}
 		
 		/*Large screen */
 		@media only screen and (min-width: 601px){
@@ -172,8 +184,7 @@
 		<div class="draftboard">
 
 			<h2>Draft Order</h2>
-			<p>need to put pick number, round, etc here</p>
-			<div class="draftStatus">
+				<div class="draftStatus">
 				
 				<div class="currentPick">
 					<div id="currentRound">Round X</div>
@@ -231,6 +242,14 @@
 			<br>
 			
 			<h1>Player Selection</h1>
+
+			<div class="selectedPlayerContainer">
+				<div id="playerName">Player Name</div>
+				<div id="playerPosition">Player position</div>
+				<div id="playerTeam">Player team</div>
+				<button onclick="addPlayer()">DRAFT PLAYER</button>
+			</div>
+
 			<p>need to put who the player has selected with action button to pick player and add to the db. </p>
 			<h1>Players to be selected</h1>
 			<p>need to put filters here</p>
